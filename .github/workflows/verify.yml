@@ -1,0 +1,44 @@
+name: Verify threshold implementations
+
+on:
+  push:
+    paths:
+      - '3bit/**'
+      - '4bit/**'
+      - '5bit/**'
+      - 'verify.py'
+      - '.github/workflows/verify.yml'
+  pull_request:
+    paths:
+      - '3bit/**'
+      - '4bit/**'
+      - '5bit/**'
+      - 'verify.py'
+      - '.github/workflows/verify.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Python 3.10 on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.10'
+      - name: Verify every supplied TI without third-party packages
+        run: python -S verify.py
+      - name: Exercise individual verification and share evaluation
+        run: |
+          python -S verify.py Q4_300
+          python -S verify.py Q4_300 --evaluate 3 7 9

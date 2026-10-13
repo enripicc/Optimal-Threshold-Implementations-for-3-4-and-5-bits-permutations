@@ -1,0 +1,2 @@
+format_version,n_bits,class_index,class_name,target_degree,shares,component_degrees,entries_per_component,packing,text_encoding,sbox_hex_bytes,component_1,component_2,component_3,component_4,packed_bytes,components_sha256,full_map_u32le_sha256,source_id
+1,3,2,Q3_2,2,3,2 2 2,64,lsb0,base64,0001020304060705,AIBFSaIMkjQo2xZhfE2SNW/b7vn/p9u2,iMb6iHaXiFbeiOaz0EK/C0S/mUC/Qka/,AIBFSaIMkjQo2xZhfE2SNW/b7vn/p9u2,,72,4b57d50ab30e71fd1fac9e3ea3b26bbc9dd884fac9cd3abb317c0859b117b90c,da88fc86c863057a4f74a46097d0c399355be43e6ed5b63ece83ec8cd3ddad5e,3bit_constructed
