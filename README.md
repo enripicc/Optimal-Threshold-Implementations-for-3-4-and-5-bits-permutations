@@ -3,8 +3,8 @@ three-, four-, and five-bit permutations. An implementation of a target
 permutation of algebraic degree `t` uses `t + 1` shares: three for a quadratic
 permutation and four for a cubic permutation.
 
-The associated paper will be linked here once it is public on the
-[IACR Cryptology ePrint Archive](https://eprint.iacr.org/).
+The associated paper is available on the
+[IACR Cryptology ePrint Archive, Report 2026/2449](https://eprint.iacr.org/2026/2449).
 
 | Size | Quadratic targets: 3 shares | Cubic targets: 4 shares | Total |
 |---|---:|---:|---:|
